@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>camelCase</title>
+</head>
+
+<body>
+    <header>camelCase!</header>
+    <button onclick="camelCase()">Begin</button>
+    <script>
+        function camelCase() {
+            phrase = window.prompt("Enter a phrase");
+            phraseSplit = phrase.toLowerCase().split(" ");
+            for (i = 1; i <= (phraseSplit.length - 1); i++) {
+                phraseSplit[i] = phraseSplit[i].charAt(0).toUpperCase() + phraseSplit[i].slice(1);
+            }
+            window.alert(phraseSplit.join(''));
+        }
+    </script>
+</body>
+
+</html>
